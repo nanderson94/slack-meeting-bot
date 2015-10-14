@@ -1,0 +1,28 @@
+{
+  "slack-hook": "",
+  "slack-channel": "bot-test",
+  "slack-icon": ":heart:",
+
+  "calendar-id": "kaiuicpoki9p3u92eklent0eec%40group.calendar.google.com",
+  "event-name": "SRCT+Weekly+Meeting",
+  "public-api-key": "AIzaSyDgaXDxmMEdtbIaq3TXmf4jxXZLG8CeoMs",
+  
+  "intro-phrases": [
+    "Good morning <!everyone>!",
+    "Hello <!everyone>!",
+    "Hey <!everyone>!",
+    "Howdy <!everyone>!"
+  ],
+
+  "mid-phrases": [
+    "According to my calculations, we have a meeting today!",
+    "Looks like there's a meeting today!",
+    "It's that time of week again! Meeting time!",
+    "It's the day we've all been waiting for! Meeting day!"
+  ],
+
+  "end-phrases": [
+    "Hope to see you there!",
+    "Looking forward to seeing you all there!"
+  ]
+}

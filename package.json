@@ -1,0 +1,26 @@
+{
+  "name": "meeting-bot",
+  "version": "0.0.1",
+  "description": "Slack bot for posting meeting times",
+  "main": "app.js",
+  "dependencies": {
+    "moment-timezone": "^0.4.1",
+    "request": "^2.65.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.gmu.edu/nander13/meeting-bot"
+  },
+  "keywords": [
+    "slack",
+    "bot",
+    "calendar",
+    "events"
+  ],
+  "author": "Nicholas Anderson <nanderson@nanderson.me>",
+  "license": "Apache-2.0"
+}
