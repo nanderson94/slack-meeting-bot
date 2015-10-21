@@ -24,8 +24,8 @@ request({
       qs: {
         "singleEvents": true,
         "orderBy": "startTime",
-        "timeMin": startTime,
-        "timeMax": endTime,
+        "timeMin": startTime.toISOString(),
+        "timeMax": endTime.toISOString(),
         "showDeleted": false,
         "maxResults": 1,
         "q": config["event-name"],
@@ -37,7 +37,7 @@ request({
 
         // Configure the time string -- based off srct.gmu.edu
         moment.tz.setDefault("America/New_York");
-        var timeString = moment.tz(body.items[0].start.dateTime, "Etc/UTC").tz("America/New_York").add(5, "h").format("h:mm A")
+        var timeString = moment.tz(body.items[0].start.dateTime, "Etc/UTC").tz("America/New_York").format("h:mm A")
 
         // Our meeting location
         var place = body.items[0].location;
@@ -51,7 +51,7 @@ request({
         request.post({
           url: config["slack-hook"],
           body: JSON.stringify({
-            "channel": "#bot-test",
+            "channel": "#"+config["slack-channel"],
             "username": "Meeting Bot",
             "icon_emoji": ":dancing_penguin:",
             "attachments": [
@@ -71,7 +71,6 @@ request({
           })
         }, function(err, res, body) {
           console.log(err);
-          console.log(res);
           console.log(body);
         })
       }
